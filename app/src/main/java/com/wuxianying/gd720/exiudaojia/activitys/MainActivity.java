@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
-
 import com.nineoldandroids.view.ViewPropertyAnimator;
 import com.wuxianying.gd720.exiudaojia.R;
 import com.wuxianying.gd720.exiudaojia.fragments.GameFragment;
@@ -19,7 +18,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     private ArrayList<Fragment> fragments;
     private ViewPager viewPager;
-    private ImageView mInfo,mProgress;
+    private ImageView mInfo,mProgress,mBrand,mPrice,mScan;
     private int line_width;
     private View line;
 
@@ -29,7 +28,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         setContentView(R.layout.activity_main);
         initViews();
         initData();
-
         viewPager.setAdapter(new FragmentStatePagerAdapter(
                 getSupportFragmentManager()) {
 
@@ -63,23 +61,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
             }
         });
-
-        mInfo.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-
-
-            }
-        });
-
-        mProgress.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                viewPager.setCurrentItem(0);
-            }
-        });
     }
 
     private void initData() {
@@ -98,38 +79,83 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private void initViews() {
         mInfo = (ImageView) findViewById(R.id.main_info);
         mProgress = (ImageView) findViewById(R.id.main_progress);
+        mBrand = (ImageView) findViewById(R.id.main_brand);
+        mPrice = (ImageView) findViewById(R.id.main_price);
+        mScan = (ImageView) findViewById(R.id.main_scan);
         line = findViewById(R.id.line);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         ViewPropertyAnimator.animate(mInfo).scaleX(1.2f).setDuration(0);
         ViewPropertyAnimator.animate(mInfo).scaleY(1.2f).setDuration(0);
     }
 
-    private void changeState(int arg0) {
-        if (arg0 == 0) {
+    private void changeState(int index) {
+        initAnimate();
+        if (index == 0) {
             ViewPropertyAnimator.animate(mInfo).scaleX(1.2f).setDuration(200);
             ViewPropertyAnimator.animate(mInfo).scaleY(1.2f).setDuration(200);
-            ViewPropertyAnimator.animate(mProgress).scaleX(1.0f)
-                    .setDuration(200);
-            ViewPropertyAnimator.animate(mProgress).scaleY(1.0f)
-                    .setDuration(200);
-        } else {
-            ViewPropertyAnimator.animate(mInfo).scaleX(1.0f).setDuration(200);
-            ViewPropertyAnimator.animate(mInfo).scaleY(1.0f).setDuration(200);
+        } else if(index == 1){
             ViewPropertyAnimator.animate(mProgress).scaleX(1.2f)
                     .setDuration(200);
             ViewPropertyAnimator.animate(mProgress).scaleY(1.2f)
                     .setDuration(200);
+        }else if(index == 2){
+            ViewPropertyAnimator.animate(mBrand).scaleX(1.2f)
+                    .setDuration(200);
+            ViewPropertyAnimator.animate(mBrand).scaleY(1.2f)
+                    .setDuration(200);
+        }else if(index == 3){
+            ViewPropertyAnimator.animate(mPrice).scaleX(1.2f)
+                    .setDuration(200);
+            ViewPropertyAnimator.animate(mPrice).scaleY(1.2f)
+                    .setDuration(200);
+        }else if(index == 4){
+            ViewPropertyAnimator.animate(mScan).scaleX(1.2f)
+                    .setDuration(200);
+            ViewPropertyAnimator.animate(mScan).scaleY(1.2f)
+                    .setDuration(200);
         }
+    }
+
+    private void initAnimate() {
+        ViewPropertyAnimator.animate(mInfo).scaleX(1.0f)
+                .setDuration(200);
+        ViewPropertyAnimator.animate(mInfo).scaleY(1.0f)
+                .setDuration(200);
+        ViewPropertyAnimator.animate(mProgress).scaleX(1.0f)
+                .setDuration(200);
+        ViewPropertyAnimator.animate(mProgress).scaleY(1.0f)
+                .setDuration(200);
+        ViewPropertyAnimator.animate(mBrand).scaleX(1.0f)
+                .setDuration(200);
+        ViewPropertyAnimator.animate(mBrand).scaleY(1.0f)
+                .setDuration(200);
+        ViewPropertyAnimator.animate(mPrice).scaleX(1.0f)
+                .setDuration(200);
+        ViewPropertyAnimator.animate(mPrice).scaleY(1.0f)
+                .setDuration(200);
+        ViewPropertyAnimator.animate(mScan).scaleX(1.0f)
+                .setDuration(200);
+        ViewPropertyAnimator.animate(mScan).scaleY(1.0f)
+                .setDuration(200);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.main_info:
-                viewPager.setCurrentItem(1);
+                viewPager.setCurrentItem(0);
                 break;
             case R.id.main_progress:
-                viewPager.setCurrentItem(0);
+                viewPager.setCurrentItem(1);
+                break;
+            case R.id.main_brand:
+                viewPager.setCurrentItem(2);
+                break;
+            case R.id.main_price:
+                viewPager.setCurrentItem(3);
+                break;
+            case R.id.main_scan:
+                viewPager.setCurrentItem(4);
                 break;
         }
     }
