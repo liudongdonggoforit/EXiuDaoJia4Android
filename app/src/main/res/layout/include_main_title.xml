@@ -3,6 +3,7 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="55dp"
+    android:background="#1777cb"
     android:gravity="center"
     >
     <TextView
@@ -12,6 +13,7 @@
         android:layout_marginLeft="10dp"
         android:gravity="center_vertical"
         android:textSize="22sp"
+        android:textColor="#ffffff"
         android:text="易修到家"/>
     <ImageView
         android:layout_width="30dp"
