@@ -8,12 +8,12 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp">
+        android:layout_height="52dp"
+        android:background="@drawable/main_tab_bg">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/main_tab_bg"
             android:orientation="vertical">
 
             <LinearLayout
@@ -67,22 +67,22 @@
                     android:src="@drawable/main_progress_normal" />
 
             </LinearLayout>
-
-            <View
-                android:id="@+id/line"
-                android:layout_width="0dp"
-                android:layout_height="3dp"
-                android:layout_alignParentBottom="true"
-                android:background="#ffffff" />
         </LinearLayout>
-
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/main_tab_bar_bg" />
     </RelativeLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"></android.support.v4.view.ViewPager>
+        android:layout_weight="1">
+    </android.support.v4.view.ViewPager>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -91,6 +91,8 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/main_repair_bg"
+            android:textColor="#ffffff"
             android:text="报修" />
     </LinearLayout>
 

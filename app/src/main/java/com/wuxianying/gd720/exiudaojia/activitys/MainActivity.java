@@ -91,24 +91,29 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private void changeState(int index) {
         initAnimate();
         if (index == 0) {
+            mInfo.setImageResource(R.drawable.main_home_pressed);
             ViewPropertyAnimator.animate(mInfo).scaleX(1.2f).setDuration(200);
             ViewPropertyAnimator.animate(mInfo).scaleY(1.2f).setDuration(200);
         } else if(index == 1){
+            mProgress.setImageResource(R.drawable.main_diy_pressed);
             ViewPropertyAnimator.animate(mProgress).scaleX(1.2f)
                     .setDuration(200);
             ViewPropertyAnimator.animate(mProgress).scaleY(1.2f)
                     .setDuration(200);
         }else if(index == 2){
+            mBrand.setImageResource(R.drawable.main_yellowpage_pressed);
             ViewPropertyAnimator.animate(mBrand).scaleX(1.2f)
                     .setDuration(200);
             ViewPropertyAnimator.animate(mBrand).scaleY(1.2f)
                     .setDuration(200);
         }else if(index == 3){
+            mPrice.setImageResource(R.drawable.main_price_pressed);
             ViewPropertyAnimator.animate(mPrice).scaleX(1.2f)
                     .setDuration(200);
             ViewPropertyAnimator.animate(mPrice).scaleY(1.2f)
                     .setDuration(200);
         }else if(index == 4){
+            mScan.setImageResource(R.drawable.main_progress_pressed);
             ViewPropertyAnimator.animate(mScan).scaleX(1.2f)
                     .setDuration(200);
             ViewPropertyAnimator.animate(mScan).scaleY(1.2f)
@@ -117,6 +122,11 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     }
 
     private void initAnimate() {
+        mInfo.setImageResource(R.drawable.main_home_normal);
+        mProgress.setImageResource(R.drawable.main_diy_normal);
+        mBrand.setImageResource(R.drawable.main_yellowpage_normal);
+        mPrice.setImageResource(R.drawable.main_price_normal);
+        mScan.setImageResource(R.drawable.main_progress_normal);
         ViewPropertyAnimator.animate(mInfo).scaleX(1.0f)
                 .setDuration(200);
         ViewPropertyAnimator.animate(mInfo).scaleY(1.0f)
