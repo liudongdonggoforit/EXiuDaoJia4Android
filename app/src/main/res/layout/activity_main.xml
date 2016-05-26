@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/include_main_title" />
+    <include android:id="@+id/include_title" layout="@layout/include_main_title" />
 
     <RelativeLayout
         android:layout_width="match_parent"

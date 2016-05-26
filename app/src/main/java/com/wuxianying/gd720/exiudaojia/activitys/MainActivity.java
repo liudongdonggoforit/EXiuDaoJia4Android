@@ -14,7 +14,7 @@ import com.wuxianying.gd720.exiudaojia.fragments.main.APPFragment;
 
 import java.util.ArrayList;
 
-public class MainActivity extends FragmentActivity implements View.OnClickListener{
+public class MainActivity extends BaseActivity implements View.OnClickListener{
 
     private ArrayList<Fragment> fragments;
     private ViewPager viewPager;
@@ -26,36 +26,42 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setImmerseLayout(findViewById(R.id.include_title));
         initViews();
         initData();
         viewPager.setAdapter(new FragmentStatePagerAdapter(
-                getSupportFragmentManager()) {
+                getSupportFragmentManager())
+        {
 
             @Override
-            public int getCount() {
+            public int getCount()
+            {
                 return fragments.size();
             }
 
             @Override
-            public Fragment getItem(int arg0) {
+            public Fragment getItem(int arg0)
+            {
                 return fragments.get(arg0);
             }
         });
 
-        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener()
+        {
 
             @Override
-            public void onPageSelected(int arg0) {
+            public void onPageSelected(int arg0)
+            {
                 changeState(arg0);
             }
 
             @Override
-            public void onPageScrolled(int arg0, float arg1, int arg2) {
+            public void onPageScrolled(int arg0, float arg1, int arg2)
+            {
                 float tagerX = arg0 * line_width + arg2 / fragments.size();
                 ViewPropertyAnimator.animate(line).translationX(tagerX)
                         .setDuration(0);
             }
-
             @Override
             public void onPageScrollStateChanged(int arg0) {
 
