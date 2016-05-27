@@ -10,6 +10,7 @@ import com.nineoldandroids.view.ViewPropertyAnimator;
 import com.wuxianying.gd720.exiudaojia.R;
 import com.wuxianying.gd720.exiudaojia.fragments.DIYFragment;
 import com.wuxianying.gd720.exiudaojia.fragments.GameFragment;
+import com.wuxianying.gd720.exiudaojia.fragments.PriceFragment;
 import com.wuxianying.gd720.exiudaojia.fragments.YellowFragment;
 import com.wuxianying.gd720.exiudaojia.fragments.main.MainFragment;
 
@@ -75,8 +76,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         fragments.add(new MainFragment());
         fragments.add(new GameFragment());
         fragments.add(new YellowFragment());
+        fragments.add(new PriceFragment());
         fragments.add(new DIYFragment());
-        fragments.add(new GameFragment());
         line_width = getWindowManager().getDefaultDisplay().getWidth()
                 / fragments.size();
         line.getLayoutParams().width = line_width;

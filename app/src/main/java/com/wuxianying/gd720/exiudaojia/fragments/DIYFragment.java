@@ -13,6 +13,6 @@ public class DIYFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		return View.inflate(getActivity(), R.layout.fragment_price, null);
+		return View.inflate(getActivity(), R.layout.fragment_shadue, null);
 	}
 }

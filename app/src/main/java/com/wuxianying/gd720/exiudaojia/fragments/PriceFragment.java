@@ -13,6 +13,6 @@ public class PriceFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		return View.inflate(getActivity(), R.layout.fragment_progress, null);
+		return View.inflate(getActivity(), R.layout.fragment_price, null);
 	}
 }
