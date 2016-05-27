@@ -2,15 +2,16 @@ package com.wuxianying.gd720.exiudaojia.activitys;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
 import com.nineoldandroids.view.ViewPropertyAnimator;
 import com.wuxianying.gd720.exiudaojia.R;
+import com.wuxianying.gd720.exiudaojia.fragments.DIYFragment;
 import com.wuxianying.gd720.exiudaojia.fragments.GameFragment;
-import com.wuxianying.gd720.exiudaojia.fragments.main.APPFragment;
+import com.wuxianying.gd720.exiudaojia.fragments.YellowFragment;
+import com.wuxianying.gd720.exiudaojia.fragments.main.MainFragment;
 
 import java.util.ArrayList;
 
@@ -71,10 +72,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 
     private void initData() {
         fragments = new ArrayList<Fragment>();
-        fragments.add(new APPFragment());
+        fragments.add(new MainFragment());
         fragments.add(new GameFragment());
-        fragments.add(new APPFragment());
-        fragments.add(new GameFragment());
+        fragments.add(new YellowFragment());
+        fragments.add(new DIYFragment());
         fragments.add(new GameFragment());
         line_width = getWindowManager().getDefaultDisplay().getWidth()
                 / fragments.size();

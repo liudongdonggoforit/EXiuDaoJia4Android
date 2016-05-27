@@ -6,35 +6,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:background="@drawable/diy_mid_bg"
+        android:background="@drawable/diy_price_bg2"
         android:gravity="center"
         android:orientation="vertical">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:src="@drawable/diy_search_bg"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|left"
-                android:layout_marginLeft="40dp"
-                android:textColor="#b4cfeb"
-                android:text="请输入您想查询的内容"/>
-        </FrameLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:gravity="center"
-       android:layout_marginTop="10dp"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="wrap_content"

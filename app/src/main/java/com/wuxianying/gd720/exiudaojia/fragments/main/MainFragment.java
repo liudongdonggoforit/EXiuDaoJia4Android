@@ -14,7 +14,7 @@ import com.wuxianying.gd720.exiudaojia.views.FlyBanner;
 import java.util.ArrayList;
 import java.util.List;
 
-public class APPFragment extends Fragment {
+public class MainFragment extends Fragment {
 	private FlyBanner mBannerLocal;//加载本地图片
 
 	private FlyBanner mBannerNet;//加载网络图片

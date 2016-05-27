@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:background="@drawable/main_tab_bg">
+        android:background="#1777cb">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,8 +23,8 @@
 
                 <ImageView
                     android:id="@+id/main_info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:onClick="onClick"
@@ -32,8 +32,8 @@
 
                 <ImageView
                     android:id="@+id/main_progress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:onClick="onClick"
@@ -41,8 +41,8 @@
 
                 <ImageView
                     android:id="@+id/main_brand"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:onClick="onClick"
@@ -50,8 +50,8 @@
 
                 <ImageView
                     android:id="@+id/main_price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:onClick="onClick"
@@ -59,8 +59,8 @@
 
                 <ImageView
                     android:id="@+id/main_scan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:onClick="onClick"
@@ -72,6 +72,8 @@
             android:id="@+id/line"
             android:layout_width="0dp"
             android:layout_height="3dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="2dp"
             android:background="@drawable/main_tab_bar_bg" />
@@ -81,19 +83,21 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_gravity="top"
         android:layout_weight="1">
     </android.support.v4.view.ViewPager>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="60dp">
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/main_repair_bg"
+            android:background="@drawable/repair_commit_bg"
             android:textColor="#ffffff"
-            android:text="报修" />
+            android:textSize="20sp"
+            android:text="报  修" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,40 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:background="@drawable/diy_mid_bg"
+        android:background="@drawable/yellowpager_bg"
         android:gravity="center"
         android:orientation="vertical">
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:src="@drawable/diy_search_bg"/>
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center|left"
                 android:layout_marginLeft="40dp"
                 android:textColor="#b4cfeb"
-                android:text="请输入您想查询的内容"/>
+                android:text="请输入您想查询的品牌"/>
         </FrameLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:gravity="center"
-       android:layout_marginTop="10dp"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="wrap_content"
@@ -44,12 +42,12 @@
                 android:layout_width="0dp"
                 android:layout_height="90dp"
                 android:layout_weight="1"
-                android:src="@drawable/diy_light_img"/>
+                android:src="@drawable/yellowpager_soney"/>
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="90dp"
                 android:layout_weight="1"
-                android:src="@drawable/diy_waterfaucet_img"/>
+                android:src="@drawable/yellowpager_lg"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -59,12 +57,12 @@
                 android:layout_width="0dp"
                 android:layout_height="90dp"
                 android:layout_weight="1"
-                android:src="@drawable/diy_clear_img"/>
+                android:src="@drawable/yellowpager_hisense"/>
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="90dp"
                 android:layout_weight="1"
-                android:src="@drawable/diy_fir_img"/>
+                android:src="@drawable/yellowpage_boloni"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -74,13 +72,12 @@
                 android:layout_width="0dp"
                 android:layout_height="90dp"
                 android:layout_weight="1"
-                android:src="@drawable/diy_hotwater_img"/>
+                android:src="@drawable/yellowpager_kohler"/>
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="90dp"
                 android:layout_weight="1"
-                android:src="@drawable/diy_airclear_img"/>
+                android:src="@drawable/yellowpager_bosch"/>
         </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>
